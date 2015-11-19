@@ -24,7 +24,7 @@ public class Projection extends Operator{
      */
 	@Override
 	public Tuple next(){
-		//Delete the lines below and add your code here
+		//Find the colomn which matches the attributePredicate
 		Tuple tuple = child.next();
 		while (tuple != null){
 		newAttributeList = new ArrayList<Attribute>();

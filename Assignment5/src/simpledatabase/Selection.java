@@ -26,7 +26,6 @@ public class Selection extends Operator{
      */
 	@Override
 	public Tuple next(){
-		//Delete the lines below and add your code here
 		Tuple tuple = child.next();
 		if (!(child.from.equals(whereTablePredicate))) return tuple;
 		while (tuple != null){

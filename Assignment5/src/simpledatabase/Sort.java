@@ -29,45 +29,6 @@ public class Sort extends Operator{
      * @return tuple
      */
 	@Override
-	/**public Tuple next(){
-		
-		//Find sort by which field
-		tuple = child.next();
-		for (int i = 0; i < tuple.getAttributeList().size(); i++){
-			if (tuple.getAttributeName(i).equals(orderPredicate))
-				target = i;
-		}
-		
-		//Add all the tuple into newAttributeList 
-		//Add all the "name" into a string arraylist for sorting
-		while (tuple != null){
-			newAttributeList.addAll(tuple.getAttributeList());
-			newAttributeList2.add(tuple.getAttributeValue(target).toString());
-			tuple = child.next();
-			returner = new Tuple(newAttributeList);
-		}
-		
-		//Sort
-		Collections.sort(newAttributeList2);
-		
-		for (int i = 0; i < newAttributeList2.size(); i++){
-			for (int j = 0; j < returner.getAttributeList().size(); j++){
-				if (returner.getAttributeValue(j).equals(newAttributeList2.get(i))){
-					
-				}
-			}
-		}
-		
-		
-		
-		
-		for (int z = 0; z < returner.getAttributeList().size(); z++){
-			System.out.println(returner.getAttributeValue(z));
-		}
-		System.out.println(newAttributeList2);
-		return null;
-		
-	}**/
 	public Tuple next(){
 		//add all tuples into tuplesResult
 		tuple = child.next();
