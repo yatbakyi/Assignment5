@@ -7,19 +7,17 @@ public class Sort extends Operator{
 	private ArrayList<Attribute> newAttributeList;
 	private String orderPredicate;
 	ArrayList<Tuple> tuplesResult;
-	ArrayList<Tuple> tuplesRealResult;
+	ArrayList<Tuple> tuplesRealResult = new ArrayList<Tuple>();
 	Tuple tuple;
 	int target = 0;
-	ArrayList<String> newAttributeList2;
+	ArrayList<String> newAttributeList2 = new ArrayList<String>();
 
 	
 	public Sort(Operator child, String orderPredicate){
 		this.child = child;
 		this.orderPredicate = orderPredicate;
 		newAttributeList = new ArrayList<Attribute>();
-		newAttributeList2 = new ArrayList<String>();
 		tuplesResult = new ArrayList<Tuple>();
-		tuplesRealResult = new ArrayList<Tuple>();
 		
 	}
 	
